@@ -1,0 +1,13 @@
+ghost:
+  image: ghost
+  ports: 
+    - 3333:2368
+  volumes_from:
+    - data
+  environment:
+    - VIRTUAL_HOST=thenoseyrose.sarahsullivan.com,blog.sarahsullivan.com
+
+data:
+  image: busybox
+  volumes:
+    - /var/lib/ghost/

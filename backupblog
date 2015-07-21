@@ -1,0 +1,11 @@
+#!/bin/bash
+
+DATE=$(date +"%m%d%Y%H%M%S")
+
+#SERVICE=testblog
+SERVICE=thenoseyrose
+
+DATA_CONTAINER=$SERVICE"_data_1"
+TAR_FILE=$SERVICE"-"$DATE".tar"
+
+docker run --rm --volumes-from $DATA_CONTAINER -v $(pwd):/backup debian tar cvf /backup/.backup/$TAR_FILE /var/lib/ghost

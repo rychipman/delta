@@ -1,0 +1,6 @@
+web:
+  image: rychipman/sarahsullivan.com
+  environment:
+    - VIRTUAL_HOST=sarahsullivan.com,www.sarahsullivan.com
+  ports:
+    - "1111:80"

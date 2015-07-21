@@ -1,0 +1,13 @@
+ghost:
+  image: ghost
+  ports: 
+    - 9999:2368
+  volumes_from:
+    - data
+  environment:
+    - VIRTUAL_HOST=testblog.ryanchipman.com
+
+data:
+  image: busybox
+  volumes:
+    - /var/lib/ghost/

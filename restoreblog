@@ -1,0 +1,8 @@
+#!/bin/bash
+
+SERVICE=testblog
+#SERVICE=thenoseyrose
+
+DATA_CONTAINER=$SERVICE"_data_1"
+
+docker run --rm --volumes-from $DATA_CONTAINER -v $(pwd):/backup debian tar cvf /backup/backup.tar /var/lib/ghost

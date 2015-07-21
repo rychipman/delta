@@ -1,0 +1,6 @@
+web:
+  image: rychipman/ryanchipman.com
+  environment:
+    - VIRTUAL_HOST=ryanchipman.com
+  ports:
+    - "2222:80"
